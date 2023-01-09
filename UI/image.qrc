@@ -1,0 +1,7 @@
+<RCC>
+  <qresource prefix="source_image">
+    <file>baptist.PNG</file>
+    <file>bap.png</file>
+    <file>ICO.png</file>
+  </qresource>
+</RCC>

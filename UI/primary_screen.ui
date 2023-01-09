@@ -1,0 +1,1237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1282</width>
+    <height>827</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>The Baptist Favorites</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="image.qrc">
+    <normaloff>:/source_image/ICO.png</normaloff>:/source_image/ICO.png</iconset>
+  </property>
+  <property name="iconSize">
+   <size>
+    <width>50</width>
+    <height>50</height>
+   </size>
+  </property>
+  <property name="tabShape">
+   <enum>QTabWidget::Triangular</enum>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <item>
+     <widget class="QFrame" name="main_container">
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout" stretch="4,25,70">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QFrame" name="side_frame">
+         <property name="styleSheet">
+          <string notr="true">#side_frame{
+	background-color: #0e225c;
+}</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_5" stretch="10,68">
+          <item>
+           <widget class="QLabel" name="label">
+            <property name="minimumSize">
+             <size>
+              <width>66</width>
+              <height>122</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">image: url(:/source_image/baptist.PNG);</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="verticalSpacer">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QFrame" name="main_list_frame">
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_2" stretch="0,0,0,0">
+          <property name="spacing">
+           <number>8</number>
+          </property>
+          <property name="leftMargin">
+           <number>20</number>
+          </property>
+          <property name="topMargin">
+           <number>40</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>30</number>
+          </property>
+          <item>
+           <widget class="QLabel" name="logo_label">
+            <property name="font">
+             <font>
+              <family>Tahoma</family>
+              <pointsize>36</pointsize>
+              <weight>50</weight>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>Baptist Favorites</string>
+            </property>
+            <property name="wordWrap">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="time_label">
+            <property name="styleSheet">
+             <string notr="true">#time_label{
+	margin: 6px 0;
+	margin-top: 0;
+}</string>
+            </property>
+            <property name="text">
+             <string>TODAY (DATE) GODBLESS US ALL!</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="search_engine">
+            <property name="font">
+             <font>
+              <family>MS Reference Sans Serif</family>
+              <pointsize>16</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">#search_engine{
+	padding: 5px 8px;
+	border: 1px solid rgba(151,154,154,0.1);
+	border-radius: 6px;
+}</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="placeholderText">
+             <string>Search Hymn...</string>
+            </property>
+            <property name="clearButtonEnabled">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QListWidget" name="song_listwidget">
+            <property name="font">
+             <font>
+              <family>Malgun Gothic</family>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="cursor" stdset="0">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">#song_listwidget{
+	border: 1px solid rgba(151,154,154,0.1);
+	background-color: #ffffff;
+	border-radius: 6px;
+}
+#song_listwidget::item{
+	border: 1px solid rgba(151,154,154,0.1);
+	padding: 4px 8px;
+	border-radius: 4px;
+	margin: 0px 2px;
+}
+#song_listwidget::item:selected{
+	border: none;
+	background-color: grey;	
+	color: #ffffff;
+}</string>
+            </property>
+            <item>
+             <property name="text">
+              <string>A New Name in Glory</string>
+             </property>
+             <property name="font">
+              <font>
+               <kerning>false</kerning>
+              </font>
+             </property>
+             <property name="background">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>0</red>
+                <green>0</green>
+                <blue>0</blue>
+               </color>
+              </brush>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>A Passion for Soul</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>A Shelter In the Time of Storm</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>All Hail the Power </string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Am I Soldier of the Cross</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Amazing Grace</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Are You Washed in the Blood</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>At Calvary</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>At the Cross</string>
+             </property>
+             <property name="flags">
+              <set>ItemIsSelectable|ItemIsEnabled</set>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Beaulah Land</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Blessed Assurance</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Blessed be the Name</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Bring Them In</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Bringing in the Sheaves</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Calvary Covers it All</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Christ Arose </string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Christ Liveth in Me</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Come Unto Me</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Constantly Abiding</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Count Your Blessings</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Day by Day</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Doxology</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Dwelling in Beaulah Land</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Each Step I Take</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Faith is the Victory</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Glory to His Name</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>God will Take Care of You</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Grace Greater than Our Sins</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Great is Thy Faithfulness</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Have Thine Own Way Lord</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Have You any Room for Jesus</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>He Abides</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>He Hideth My Soul</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>He Keeps Me Singing</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>He Leadeth Me</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>He Lives</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Heavenly Sunlight</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Higher Ground</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Hold the Fort</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Holy, Holy, Holy</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>How Great Thou Art</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>I Am Resolved</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>I Am Thine O Lord</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>I Belong to the King</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>I Heard the Voice of Jesus Say</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>I Know Who Holds Tomorrow</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>I Know Whom I Believed</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>I Love to Tell the Story</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>I Need Thee Every Hour</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>I Shall Not be Moved</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>I Surrender All</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Ill be True, Precious Jesus</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Is Your All in the Altar</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>It is Well with My Soul</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Jesus Paid it All</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Jesus Saves</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Jesus, Lover of My Soul</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Joy in Serving Jesus</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Just As I Am</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Leaning On the Everlasting Arms</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Living for Jesus</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Love Lifted Me</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Loyalty to Christ</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Make Me a Blessing</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Make Me a Channel of Blessing</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Mansion Over The Hilltop</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Meet Me There</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Mine Eyes Have Seen the Glory</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>My Father Planned it All</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>My Savior First of All</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>My Saviors Love</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>My Sins are Gone</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Near the Cross</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Nothing but the Blood of Jesus</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Now I Belong to Jesus</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Oh How I Love Jesus</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>One Day</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Onward Christian Soldiers</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Open My Eyes, That I May See</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Our Best</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Pass Me Not</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Praise Him, Praise Him</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Redeemed (F. Crosby)</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Rescue the Perishing</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Revive Us Again</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Rock of Ages</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Saved, Saved</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Save Through Jesus Blood</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Savior Like a Shepherd Lead Us</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Send the Light</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Shall We Gather at the River</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Since Jesus Came into My Heart</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Softly and Tenderly</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Sound the Battle Cry</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Stand Up for Jesus</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Standing On the Promises</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Stepping In the Light</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Still Sweeter Everyday</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Such Love</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Sweet By and By</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Sweet Hour of Prayer</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Sweet Peace the Gift of God's Love</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Tell It to Jesus</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>The Banner of the Cross</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>The Bible Stands</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>The Church's One Foundation</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>The Comforter has Come</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>The Fight is On</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>The Lily of the Vally</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>The Name of Jesus</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>The Old Rugged Cross</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>The Regions Beyond</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>The Solid Rock</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>There is Power in the Blood</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>There Shall Be Showers of Blessings</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Theres a Great Day Coming</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>This World is not My Home</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Till The Whole World Knows</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Tis So Sweet to Trust in Jesus</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>To God Be the Glory</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>To the Work</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Trust and Obey</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Turn Your Eyes Upon Jesus</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Verily, Verily</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Victory In Jesus</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Weve a Story to Tell</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>What a Friend</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>When the Roll is Called Up Yonder</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>When We all Get to Heaven</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Where Could I Go</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Whisper a Prayer</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Who Is on the Lord Side</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Wonderful Grace of Jesus</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Wonderful Words of Life</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Yes, I Know</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>BASTA'T TAYO'Y SAMA-SAMA</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>FIND US FAITHFUL</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>HAVE YOU DECIDED TO FOLLOW JESUS</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>PSALMS 19</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QFrame" name="main_func_frame">
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="30,50">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QFrame" name="song_lyric_frame">
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_4">
+             <property name="spacing">
+              <number>8</number>
+             </property>
+             <property name="leftMargin">
+              <number>20</number>
+             </property>
+             <property name="topMargin">
+              <number>159</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>30</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="title_label">
+               <property name="text">
+                <string>Song: {TITLE}</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QListWidget" name="lyrics_listwidget">
+               <property name="font">
+                <font>
+                 <family>Malgun Gothic</family>
+                 <pointsize>10</pointsize>
+                 <weight>50</weight>
+                 <bold>false</bold>
+                </font>
+               </property>
+               <property name="cursor" stdset="0">
+                <cursorShape>PointingHandCursor</cursorShape>
+               </property>
+               <property name="autoFillBackground">
+                <bool>false</bool>
+               </property>
+               <property name="styleSheet">
+                <string notr="true"/>
+               </property>
+               <property name="frameShape">
+                <enum>QFrame::Box</enum>
+               </property>
+               <property name="frameShadow">
+                <enum>QFrame::Sunken</enum>
+               </property>
+               <property name="lineWidth">
+                <number>1</number>
+               </property>
+               <property name="dragDropMode">
+                <enum>QAbstractItemView::DragOnly</enum>
+               </property>
+               <property name="defaultDropAction">
+                <enum>Qt::IgnoreAction</enum>
+               </property>
+               <property name="movement">
+                <enum>QListView::Snap</enum>
+               </property>
+               <property name="flow">
+                <enum>QListView::TopToBottom</enum>
+               </property>
+               <property name="isWrapping" stdset="0">
+                <bool>false</bool>
+               </property>
+               <property name="resizeMode">
+                <enum>QListView::Fixed</enum>
+               </property>
+               <property name="spacing">
+                <number>2</number>
+               </property>
+               <property name="viewMode">
+                <enum>QListView::ListMode</enum>
+               </property>
+               <property name="wordWrap">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QFrame" name="live_frame">
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_3" stretch="10,50,10,10">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <property name="leftMargin">
+              <number>20</number>
+             </property>
+             <property name="topMargin">
+              <number>20</number>
+             </property>
+             <property name="rightMargin">
+              <number>20</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="logo_img">
+               <property name="styleSheet">
+                <string notr="true">#logo_img{
+	margin-bottom: 147px;
+}</string>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_2">
+               <property name="font">
+                <font>
+                 <family>Century Schoolbook</family>
+                 <pointsize>20</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">#label_2{
+	background-color: #000000;
+	color: rgb(255, 231, 47);
+	padding-right: 70px;
+	padding-left: 50px;
+}</string>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="scaledContents">
+                <bool>true</bool>
+               </property>
+               <property name="wordWrap">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QFrame" name="frame_3">
+               <property name="frameShape">
+                <enum>QFrame::StyledPanel</enum>
+               </property>
+               <property name="frameShadow">
+                <enum>QFrame::Raised</enum>
+               </property>
+               <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="50,20,20">
+                <property name="spacing">
+                 <number>10</number>
+                </property>
+                <property name="leftMargin">
+                 <number>0</number>
+                </property>
+                <property name="topMargin">
+                 <number>10</number>
+                </property>
+                <property name="rightMargin">
+                 <number>0</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>0</number>
+                </property>
+                <item>
+                 <spacer name="horizontalSpacer">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="clear_btn">
+                  <property name="font">
+                   <font>
+                    <family>MS Reference Sans Serif</family>
+                    <pointsize>14</pointsize>
+                   </font>
+                  </property>
+                  <property name="cursor">
+                   <cursorShape>PointingHandCursor</cursorShape>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">#clear_btn{
+	color: #000;
+	background-color: transparent;
+	border: 1px solid grey;
+	padding: 10px;
+	border-radius: 7px;
+}</string>
+                  </property>
+                  <property name="text">
+                   <string>CLEAR</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="live_btn">
+                  <property name="font">
+                   <font>
+                    <family>MS Reference Sans Serif</family>
+                    <pointsize>14</pointsize>
+                   </font>
+                  </property>
+                  <property name="cursor">
+                   <cursorShape>PointingHandCursor</cursorShape>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">#live_btn{
+	color: #ffffff;
+	background-color: rgb(243, 0, 0);
+	border: none;
+	padding: 10px;
+	border-radius: 7px;
+}</string>
+                  </property>
+                  <property name="text">
+                   <string>Live</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_4">
+               <property name="text">
+                <string/>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources>
+  <include location="image.qrc"/>
+ </resources>
+ <connections/>
+</ui>
